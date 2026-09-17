@@ -1,46 +1,28 @@
 # BRNS Simulator
 
-Bourse des Ressources Naturelles du Sénégal 🇸🇳
+**BRNS Simulator** est une plateforme de simulation de trading basée sur les ressources naturelles du Sénégal. Ce n'est pas un générateur de blagues et ce prototype ne fournit pas de conseil financier.
 
-## Générateur de blagues
+## Fonctionnalités
 
-La version actuelle du projet contient un générateur de blagues aléatoires utilisant l'API externe [JokeAPI](https://jokeapi.dev/).
+- tableau de bord du marché ;
+- cours simulés pour l'eau, l'arachide, le poisson, le phosphate et l'or ;
+- évolution de la demande, des stocks et de l'indice BRNS ;
+- achat et vente simulés ;
+- cycles de marché avec variations aléatoires ;
+- capital, portefeuille et performance ;
+- score environnemental ;
+- interface responsive.
 
-### Fonctionnalités
+## Utilisation
 
-- chargement automatique d'une blague au démarrage ;
-- bouton **Nouvelle blague** ;
-- prise en charge des blagues en une partie et en deux parties ;
-- mode sans contenu sensible (`safe-mode`) ;
-- bouton pour copier la blague ;
-- gestion des erreurs réseau ;
-- interface responsive pour mobile et ordinateur.
+Ouvrir `index.html` dans un navigateur moderne. Cliquer sur **Lancer le cycle** pour générer une nouvelle séance, puis utiliser les boutons **Trader**, **Acheter** et **Vendre**.
 
-### Lancer le projet
+Les données et transactions sont fictives et servent uniquement à la démonstration et à l'éducation.
 
-1. Clone le dépôt :
+## Publication
 
-   ```bash
-   git clone https://github.com/amdiaymamarket/brns-Simulator.git
-   ```
-
-2. Ouvre `index.html` dans un navigateur moderne.
-3. Autorise les requêtes réseau si le navigateur le demande.
-
-Aucune dépendance ni clé API n'est nécessaire. L'application utilise `fetch` et l'API publique JokeAPI directement depuis le navigateur.
-
-### Fichiers principaux
-
-```text
-brns-Simulator/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-├── LICENSE
-└── .gitignore
-```
+Le projet est une application statique HTML/CSS/JavaScript compatible avec GitHub Pages.
 
 ## Licence
 
-Ce projet est distribué sous licence MIT.
+MIT — voir `LICENSE`.

@@ -1,39 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="BRNS Simulator - générateur de blagues aléatoires avec une API externe."
-    />
-    <title>BRNS Joke Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="app-shell">
-      <section class="joke-card" aria-labelledby="page-title">
-        <div class="brand-mark" aria-hidden="true">😄</div>
-        <p class="eyebrow">BRNS Simulator</p>
-        <h1 id="page-title">Générateur de blagues</h1>
-        <p class="intro">
-          Clique sur le bouton pour découvrir une blague aléatoire fournie par une API externe.
-        </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BRNS Simulator — plateforme de simulation de trading basée sur les ressources naturelles du Sénégal." />
+  <title>BRNS Simulator — Trading des ressources naturelles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">BRNS</span><div><strong>BRNS Simulator</strong><small>Marché des ressources naturelles du Sénégal</small></div></div>
+    <button id="nextSessionBtn" class="primary">Lancer le cycle</button>
+  </header>
 
-        <div id="jokeOutput" class="joke-output" aria-live="polite" aria-atomic="true">
-          <p class="placeholder">Ta prochaine blague apparaît ici…</p>
-        </div>
+  <main class="container">
+    <section class="hero"><div><p class="eyebrow">Plateforme de simulation de trading</p><h1>Simulez le marché des ressources naturelles.</h1><p class="muted">Suivez les prix, la demande, les stocks et l’impact environnemental dans un marché virtuel inspiré du Sénégal.</p></div><div class="market-status"><span class="live-dot"></span> Marché ouvert <small id="lastUpdate">Cycle 1</small></div></section>
 
-        <div class="actions">
-          <button id="newJokeBtn" class="primary-btn" type="button">Nouvelle blague</button>
-          <button id="copyBtn" class="secondary-btn" type="button" disabled>Copier</button>
-        </div>
+    <section class="kpis">
+      <article><span>Capital disponible</span><strong id="capital">10.00M XOF</strong></article>
+      <article><span>Valeur du portefeuille</span><strong id="portfolio">10.00M XOF</strong></article>
+      <article><span>Performance</span><strong id="performance" class="positive">+0.00%</strong></article>
+      <article><span>Indice BRNS</span><strong id="index">100.0</strong></article>
+    </section>
 
-        <p id="statusMessage" class="status" role="status"></p>
-        <p class="source">Source : <a href="https://jokeapi.dev/" target="_blank" rel="noreferrer">JokeAPI</a></p>
-      </section>
-    </main>
+    <section class="workspace">
+      <div class="panel"><div class="panel-title"><div><p class="eyebrow">Marché</p><h2>Cours des ressources</h2></div><span class="badge">Simulation</span></div><div class="table-wrap"><table><thead><tr><th>Ressource</th><th>Prix (XOF)</th><th>Variation</th><th>Demande</th><th>Stock</th><th>Action</th></tr></thead><tbody id="marketRows"></tbody></table></div></div>
+      <aside class="panel order-panel"><p class="eyebrow">Ordre simulé</p><h2>Votre position</h2><label for="resourceSelect">Ressource</label><select id="resourceSelect"></select><label for="quantity">Quantité</label><input id="quantity" type="number" min="1" value="10" /><div class="order-summary"><span>Montant estimé</span><strong id="orderTotal">0 XOF</strong></div><div class="order-actions"><button id="buyBtn" class="primary">Acheter</button><button id="sellBtn" class="danger">Vendre</button></div><p id="message" class="message" role="status"></p></aside>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section class="panel footer-panel"><div><p class="eyebrow">Indicateur durable</p><h2>Score environnemental</h2></div><div class="eco-score"><strong id="ecoScore">86%</strong><div class="progress"><span id="ecoBar"></span></div></div></section>
+  </main>
+  <footer>BRNS Simulator · Prototype éducatif de marché · Les données sont fictives et ne constituent pas un conseil financier.</footer>
+  <script src="script.js"></script>
+</body>
 </html>
