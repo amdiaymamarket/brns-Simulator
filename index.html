@@ -5,62 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="BRNS Simulator - simulateur de gestion des ressources naturelles du Sénégal."
+      content="BRNS Simulator - générateur de blagues aléatoires avec une API externe."
     />
-    <title>BRNS Simulator</title>
+    <title>BRNS Joke Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">Bourse des Ressources Naturelles du Sénégal</p>
-          <h1>BRNS Simulator</h1>
+    <main class="app-shell">
+      <section class="joke-card" aria-labelledby="page-title">
+        <div class="brand-mark" aria-hidden="true">😄</div>
+        <p class="eyebrow">BRNS Simulator</p>
+        <h1 id="page-title">Générateur de blagues</h1>
+        <p class="intro">
+          Clique sur le bouton pour découvrir une blague aléatoire fournie par une API externe.
+        </p>
+
+        <div id="jokeOutput" class="joke-output" aria-live="polite" aria-atomic="true">
+          <p class="placeholder">Ta prochaine blague apparaît ici…</p>
         </div>
-        <button id="nextCycleBtn" class="primary-btn">Cycle suivant</button>
-      </header>
 
-      <main class="dashboard">
-        <section class="summary-grid">
-          <article class="stat-card accent">
-            <span class="label">Jour</span>
-            <strong id="dayCount">1</strong>
-          </article>
-          <article class="stat-card accent">
-            <span class="label">Indice du marché</span>
-            <strong id="marketIndex">100</strong>
-          </article>
-          <article class="stat-card accent">
-            <span class="label">Score environnemental</span>
-            <strong id="ecoScore">86%</strong>
-          </article>
-        </section>
+        <div class="actions">
+          <button id="newJokeBtn" class="primary-btn" type="button">Nouvelle blague</button>
+          <button id="copyBtn" class="secondary-btn" type="button" disabled>Copier</button>
+        </div>
 
-        <section id="resourceCards" class="resource-grid" aria-live="polite"></section>
-
-        <section class="panel">
-          <div class="panel-header">
-            <h2>Résumé du marché</h2>
-            <button id="resetBtn" class="ghost-btn">Réinitialiser</button>
-          </div>
-
-          <div class="stats-grid">
-            <div class="mini-card">
-              <span>Transactions</span>
-              <strong id="transactions">0</strong>
-            </div>
-            <div class="mini-card">
-              <span>Budget national</span>
-              <strong id="budget">4.8M XOF</strong>
-            </div>
-            <div class="mini-card">
-              <span>Volume total</span>
-              <strong id="totalVolume">0k</strong>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
+        <p id="statusMessage" class="status" role="status"></p>
+        <p class="source">Source : <a href="https://jokeapi.dev/" target="_blank" rel="noreferrer">JokeAPI</a></p>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>

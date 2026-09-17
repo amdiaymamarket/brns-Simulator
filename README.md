@@ -2,41 +2,34 @@
 
 Bourse des Ressources Naturelles du Sénégal 🇸🇳
 
-BRNS Simulator est un projet de démonstration visant à simuler les dynamiques de marché des ressources naturelles du Sénégal. Il met en scène des indicateurs comme les stocks, la demande, les prix et la performance environnementale.
+## Générateur de blagues
 
-## Objectif
+La version actuelle du projet contient un générateur de blagues aléatoires utilisant l'API externe [JokeAPI](https://jokeapi.dev/).
 
-Créer un prototype de tableau de bord pour observer la gestion des ressources clés du pays :
-- eau ;
-- terre ;
-- forêts ;
-- pêche ;
-- minerais.
+### Fonctionnalités
 
-## Fonctionnalités du prototype
+- chargement automatique d'une blague au démarrage ;
+- bouton **Nouvelle blague** ;
+- prise en charge des blagues en une partie et en deux parties ;
+- mode sans contenu sensible (`safe-mode`) ;
+- bouton pour copier la blague ;
+- gestion des erreurs réseau ;
+- interface responsive pour mobile et ordinateur.
 
-- vue d'ensemble du marché ;
-- suivi de la disponibilité des ressources ;
-- simulation de la demande et des prix ;
-- calcul d'un indice du marché ;
-- score environnemental ;
-- progression par cycles ;
-- réinitialisation rapide de la simulation.
+### Lancer le projet
 
-## Stack technique
+1. Clone le dépôt :
 
-Le prototype actuel est léger et autonome :
-- HTML
-- CSS
-- JavaScript
+   ```bash
+   git clone https://github.com/amdiaymamarket/brns-Simulator.git
+   ```
 
-## Démarrer le projet
+2. Ouvre `index.html` dans un navigateur moderne.
+3. Autorise les requêtes réseau si le navigateur le demande.
 
-1. Clone le dépôt.
-2. Ouvrez simplement `index.html` dans votre navigateur.
-3. Cliquez sur le bouton `Cycle suivant` pour simuler un nouveau tour.
+Aucune dépendance ni clé API n'est nécessaire. L'application utilise `fetch` et l'API publique JokeAPI directement depuis le navigateur.
 
-## Exemple de structure
+### Fichiers principaux
 
 ```text
 brns-Simulator/
@@ -48,23 +41,6 @@ brns-Simulator/
 └── .gitignore
 ```
 
-## Évolutions prévues
-
-- moteur de simulation plus réaliste ;
-- gestion des acteurs et des politiques publiques ;
-- historique des cycles ;
-- export des résultats ;
-- dashboard visuel plus avancé ;
-- version React ou Next.js si le projet s'agrandit.
-
-## Contribution
-
-Les contributions sont bienvenues. Vous pouvez proposer des idées, des améliorations ou des correctifs.
-
 ## Licence
 
 Ce projet est distribué sous licence MIT.
-
-## Auteur
-
-Projet initié par Am'Diayma Market.
