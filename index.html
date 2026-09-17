@@ -3,34 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BRNS Simulator — plateforme de simulation de trading basée sur les ressources naturelles du Sénégal." />
-  <title>BRNS Simulator — Trading des ressources naturelles</title>
+  <meta name="description" content="DËHËREM Simulator — simulation virtuelle de l'économie et des marchés du Sénégal." />
+  <title>DËHËREM Simulator — L'économie sénégalaise entre vos mains</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><span class="logo">BRNS</span><div><strong>BRNS Simulator</strong><small>Marché des ressources naturelles du Sénégal</small></div></div>
-    <button id="nextSessionBtn" class="primary">Lancer le cycle</button>
+    <a class="brand" href="#accueil"><span class="flag">🇸🇳</span><span><b>DËHËREM</b><small>Simulator</small></span></a>
+    <p class="tagline">L'économie sénégalaise, entre vos mains</p>
+    <div class="user"><span>◷</span><span><b>Samedi 26 Avril 2025</b><small>Jour 12 · Saison des pluies</small></span><strong>Galbi⌄</strong></div>
   </header>
 
-  <main class="container">
-    <section class="hero"><div><p class="eyebrow">Plateforme de simulation de trading</p><h1>Simulez le marché des ressources naturelles.</h1><p class="muted">Suivez les prix, la demande, les stocks et l’impact environnemental dans un marché virtuel inspiré du Sénégal.</p></div><div class="market-status"><span class="live-dot"></span> Marché ouvert <small id="lastUpdate">Cycle 1</small></div></section>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <nav aria-label="Navigation principale">
+        <a class="active" href="#accueil">⌂ <span>Accueil</span></a><a href="#marches">♜ <span>Marchés</span></a><a href="#regions">◈ <span>Régions</span></a><a href="#entreprises">▣ <span>Entreprises</span></a><a href="#transport">▰ <span>Transport</span></a><a href="#economie">▥ <span>Économie</span></a><a href="#portefeuille">▰ <span>Portefeuille</span></a><a href="#meteo">☁ <span>Météo & Saisons</span></a><a href="#evenements">▣ <span>Événements</span></a><a href="#admin">⚙ <span>Administration</span></a>
+      </nav>
+      <div class="sidebar-footer"><b>🇸🇳 DËHËREM Simulator</b><small>Version Web 1.0</small><p>Apprendre · Simuler · Construire<br />un Sénégal plus fort</p></div>
+    </aside>
 
-    <section class="kpis">
-      <article><span>Capital disponible</span><strong id="capital">10.00M XOF</strong></article>
-      <article><span>Valeur du portefeuille</span><strong id="portfolio">10.00M XOF</strong></article>
-      <article><span>Performance</span><strong id="performance" class="positive">+0.00%</strong></article>
-      <article><span>Indice BRNS</span><strong id="index">100.0</strong></article>
-    </section>
+    <main id="accueil" class="dashboard">
+      <section class="hero"><div><p class="eyebrow">Plateforme économique virtuelle</p><h1>DËHËREM Simulator</h1><p>Une économie dynamique, 14 régions, des milliers d'opportunités.</p></div><div class="hero-actions"><span>📈 Productions locales</span><span>🤝 Commerce national</span><span>🚚 Transport interrégional</span><span>♻ Développement durable</span></div></section>
 
-    <section class="workspace">
-      <div class="panel"><div class="panel-title"><div><p class="eyebrow">Marché</p><h2>Cours des ressources</h2></div><span class="badge">Simulation</span></div><div class="table-wrap"><table><thead><tr><th>Ressource</th><th>Prix (XOF)</th><th>Variation</th><th>Demande</th><th>Stock</th><th>Action</th></tr></thead><tbody id="marketRows"></tbody></table></div></div>
-      <aside class="panel order-panel"><p class="eyebrow">Ordre simulé</p><h2>Votre position</h2><label for="resourceSelect">Ressource</label><select id="resourceSelect"></select><label for="quantity">Quantité</label><input id="quantity" type="number" min="1" value="10" /><div class="order-summary"><span>Montant estimé</span><strong id="orderTotal">0 XOF</strong></div><div class="order-actions"><button id="buyBtn" class="primary">Acheter</button><button id="sellBtn" class="danger">Vendre</button></div><p id="message" class="message" role="status"></p></aside>
-    </section>
+      <section class="content-grid top-grid"><div class="main-column"><div class="kpis"><article><i>🪙</i><div><small>Volume du marché</small><strong>48,6 M D</strong><em>▲ +7,8% <span>cette période</span></em></div></article><article><i>📦</i><div><small>Stock global</small><strong>58%</strong><em class="neutral">Niveau moyen des stocks</em><meter value="58" min="0" max="100"></meter></div></article><article><i>📈</i><div><small>Demande nationale</small><strong>81%</strong><em class="neutral">Activité commerciale</em><meter value="81" min="0" max="100"></meter></div></article><article><i>🚛</i><div><small>Transport</small><strong>+8,1%</strong><em class="neutral">Coût logistique</em><meter value="72" min="0" max="100"></meter></div></article></div>
 
-    <section class="panel footer-panel"><div><p class="eyebrow">Indicateur durable</p><h2>Score environnemental</h2></div><div class="eco-score"><strong id="ecoScore">86%</strong><div class="progress"><span id="ecoBar"></span></div></div></section>
-  </main>
-  <footer>BRNS Simulator · Prototype éducatif de marché · Les données sont fictives et ne constituent pas un conseil financier.</footer>
+        <section id="marches" class="panel"><header><h2>📊 Marchés principaux</h2><a href="#marches">Voir tout →</a></header><div id="marketCards" class="market-cards"></div></section>
+        <section class="lower-grid"><section class="panel chart-panel"><header><h2>📈 Évolution des prix</h2><small>(7 derniers jours)</small></header><div class="chart"><div class="y-axis"><span>1 400</span><span>1 000</span><span>600</span><span>200</span></div><svg viewBox="0 0 600 210" role="img" aria-label="Évolution simulée des prix"><path d="M0 38 L85 25 L170 38 L255 35 L340 40 L425 36 L510 43 L600 35"/><path class="line2" d="M0 115 L85 95 L170 83 L255 100 L340 79 L425 90 L510 69 L600 78"/><path class="line3" d="M0 150 L85 137 L170 148 L255 130 L340 142 L425 125 L510 135 L600 118"/><path class="line4" d="M0 178 L85 163 L170 170 L255 159 L340 172 L425 155 L510 165 L600 151"/></svg></div><div class="legend"><span>● Poisson</span><span>● Arachide</span><span>● Riz</span><span>● Oignon</span><span>● Fruits</span></div></section><section class="panel"><header><h2>🏢 Entreprises actives</h2><a href="#entreprises">Voir toutes →</a></header><ul class="companies"><li>🏭 Sénégal Agro-Industrie <b>● Active</b></li><li>🐟 Océan Bleu <b>● Active</b></li><li>🚚 Transport 14R <b>● Active</b></li><li>🏪 DËHËREM Commerce <b>● Active</b></li></ul></section></div></div>
+
+      <aside class="right-column"><section id="portefeuille" class="panel wallet"><header><h2>👛 Portefeuille virtuel</h2></header><strong>12 450 000 D</strong><em>▲ +8,4% <span>cette période</span></em><button>Lancer une simulation →</button></section><section id="evenements" class="panel event"><header><h2>🌧 Événement économique en cours</h2></header><div class="event-image">🌴 🌧️ 🚤</div><h3>Fortes pluies</h3><p>La production agricole augmente, mais le transport devient plus difficile.</p><b>Impact : <span> Agriculture +12% · Transport +8%</span></b></section><section id="meteo" class="panel weather"><header><h2>☁ Météo & Saisons</h2></header><h3>☁ Saison des pluies</h3><p>Prochain changement de saison : <b>15 jours</b></p><div class="weather-row"><span>☀<b>Dakar</b><strong>24°</strong></span><span>☀<b>Saint-Louis</b><strong>23°</strong></span><span>☀<b>Ziguinchor</b><strong>25°</strong></span><span>☀<b>Tambacounda</b><strong>26°</strong></span></div></section></aside></section>
+
+      <section id="regions" class="bottom-grid"><section class="panel region-panel"><header><h2>🗺 Régions du Sénégal</h2><a href="#regions">Voir toutes →</a></header><div class="senegal-map">🇸🇳<div class="map-label dakar">Dakar</div><div class="map-label saint">Saint-Louis</div><div class="map-label kaolack">Kaolack</div><div class="map-label tamba">Tambacounda</div><div class="map-label ziguinchor">Ziguinchor</div></div><div class="map-legend"><span>● Production élevée</span><span>● Équilibre</span><span>● En tension</span></div></section><section class="panel activity"><header><h2>♟ Activité des régions</h2><a href="#regions">Voir toutes →</a></header><ol><li>Dakar <meter value="96" max="100"></meter><b>96%</b></li><li>Saint-Louis <meter value="88" max="100"></meter><b>88%</b></li><li>Thiès <meter value="82" max="100"></meter><b>82%</b></li><li>Diourbel <meter value="76" max="100"></meter><b>76%</b></li><li>Fatick <meter value="71" max="100"></meter><b>71%</b></li></ol></section></section>
+    </main>
+  </div>
+  <footer>DËHËREM Simulator · Sénégal · 14 régions · Une seule économie <span>Simulation 100% virtuelle · Aucune valeur monétaire réelle</span></footer>
   <script src="script.js"></script>
 </body>
 </html>

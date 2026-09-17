@@ -1,28 +1,25 @@
-# BRNS Simulator
+# DËHËREM Simulator
 
-**BRNS Simulator** est une plateforme de simulation de trading basée sur les ressources naturelles du Sénégal. Ce n'est pas un générateur de blagues et ce prototype ne fournit pas de conseil financier.
+**DËHËREM Simulator** est une plateforme de simulation virtuelle de l'économie sénégalaise : marchés, ressources, régions, entreprises, transport et portefeuille.
+
+L'application propose une expérience de simulation de trading autour des productions et échanges du Sénégal. La monnaie de simulation est le **DËHËREM**, représenté par le symbole **D**.
 
 ## Fonctionnalités
 
-- tableau de bord du marché ;
-- cours simulés pour l'eau, l'arachide, le poisson, le phosphate et l'or ;
-- évolution de la demande, des stocks et de l'indice BRNS ;
-- achat et vente simulés ;
-- cycles de marché avec variations aléatoires ;
-- capital, portefeuille et performance ;
-- score environnemental ;
-- interface responsive.
+- tableau de bord économique inspiré des 14 régions du Sénégal ;
+- marchés simulés : poisson, arachide, riz, oignon, fruits et transport ;
+- prix, production, demande et stocks ;
+- portefeuille virtuel et lancement d'une simulation ;
+- météo, saisons et événements économiques ;
+- activité régionale, entreprises et évolution des prix ;
+- design responsive pour ordinateur et mobile.
 
 ## Utilisation
 
-Ouvrir `index.html` dans un navigateur moderne. Cliquer sur **Lancer le cycle** pour générer une nouvelle séance, puis utiliser les boutons **Trader**, **Acheter** et **Vendre**.
+Ouvrir `index.html` dans un navigateur moderne. Cliquer sur **Lancer une simulation** pour générer une variation de marché.
 
-Les données et transactions sont fictives et servent uniquement à la démonstration et à l'éducation.
+Toutes les données sont fictives. Le DËHËREM et les transactions présentés sont exclusivement virtuels et ne constituent pas une monnaie réelle ni un conseil financier.
 
 ## Publication
 
-Le projet est une application statique HTML/CSS/JavaScript compatible avec GitHub Pages.
-
-## Licence
-
-MIT — voir `LICENSE`.
+Application statique HTML/CSS/JavaScript compatible avec GitHub Pages.
