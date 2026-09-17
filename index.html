@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BRNS Simulator - simulateur de gestion des ressources naturelles du Sénégal."
+    />
+    <title>BRNS Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Bourse des Ressources Naturelles du Sénégal</p>
+          <h1>BRNS Simulator</h1>
+        </div>
+        <button id="nextCycleBtn" class="primary-btn">Cycle suivant</button>
+      </header>
+
+      <main class="dashboard">
+        <section class="summary-grid">
+          <article class="stat-card accent">
+            <span class="label">Jour</span>
+            <strong id="dayCount">1</strong>
+          </article>
+          <article class="stat-card accent">
+            <span class="label">Indice du marché</span>
+            <strong id="marketIndex">100</strong>
+          </article>
+          <article class="stat-card accent">
+            <span class="label">Score environnemental</span>
+            <strong id="ecoScore">86%</strong>
+          </article>
+        </section>
+
+        <section id="resourceCards" class="resource-grid" aria-live="polite"></section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h2>Résumé du marché</h2>
+            <button id="resetBtn" class="ghost-btn">Réinitialiser</button>
+          </div>
+
+          <div class="stats-grid">
+            <div class="mini-card">
+              <span>Transactions</span>
+              <strong id="transactions">0</strong>
+            </div>
+            <div class="mini-card">
+              <span>Budget national</span>
+              <strong id="budget">4.8M XOF</strong>
+            </div>
+            <div class="mini-card">
+              <span>Volume total</span>
+              <strong id="totalVolume">0k</strong>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
